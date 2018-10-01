@@ -1,7 +1,7 @@
 FROM node:6
 
 ADD package.json /tmp/package.json
-RUN cd /tmp && npm install -g grunt-cli && npm install
+RUN cd /tmp && npm install -g grunt-cli bower && npm install
 
 ADD . /var/www/hobknob
 RUN cp -a /tmp/node_modules /var/www/hobknob/
